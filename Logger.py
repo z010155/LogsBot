@@ -34,7 +34,7 @@ class SABot:
             if Receive:
                 return Socket.recv(self.BufSize).decode('utf-8')
                 
-    ef startKeepAlive(self, TimerSeconds = 20):
+    def startKeepAlive(self, TimerSeconds = 20):
         if hasattr(self, 'SocketConn'):
             KeepAliveTimer = threading.Timer(TimerSeconds, self.startKeepAlive)
             KeepAliveTimer.daemon = True
