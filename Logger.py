@@ -168,12 +168,12 @@ class SABot:
         if not Private:
             try:
                 print('[{} in {}] Message: {}'.format(Sender, self.BotServer, SenderMessage))
-                Data = open('http://github.com/Michal2SAB/LogsBot/logs.txt', 'a')
+                Data = open('logs.txt', 'a')
                 Data.write('[{} in {} on {}] Message: {}\n'.format(Sender, self.BotServer, datetime.now().strftime('%Y-%m-%d %H:%M:%S'), SenderMessage))
                 Data.close()
                 if Private:
                     print('[PM from {} in {}] Message: {}'.format(Sender, self.BotServer, SenderMessage))
-                    Data = open('http://github.com/Michal2SAB/LogsBot/logs.txt', 'a')
+                    Data = open('logs.txt', 'a')
                     Data.write('[PM from {} in {} on {}] Message: {}\n'.format(Sender, self.BotServer, datetime.now().strftime('%Y-%m-%d %H:%M:%S'), SenderMessage))
                     Data.close()
             except UnicodeEncodeError:
